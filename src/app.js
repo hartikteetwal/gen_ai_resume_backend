@@ -6,7 +6,6 @@ const interviewRouter = require("./routes/interview.routes")
 
 const app = express()
 
-const cors = require("cors");
 
 app.use(
     cors({
