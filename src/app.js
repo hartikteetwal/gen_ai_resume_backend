@@ -6,14 +6,19 @@ const interviewRouter = require("./routes/interview.routes")
 
 const app = express()
 
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://your-frontend.vercel.app",
-];
-app.use(cors({
-    origin: allowedOrigins,
-    credentials:true
-}))
+const cors = require("cors");
+
+app.use(
+    cors({
+        origin: [
+            "http://localhost:5173",
+            "https://gen-ai-resume-frontend.vercel.app",
+        ],
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+    })
+);
 
 app.use(express.json())
 app.use(cookieParser())
