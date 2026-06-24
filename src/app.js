@@ -2,7 +2,7 @@ const express = require("express")
 const authRouter = require("./routes/auth.route")
 const cookieParser = require("cookie-parser")
 const cors = require("cors")
-const interviewRouter = require("./routes/interview.Routes")
+const interviewRouter = require("./routes/interview.routes")
 
 const app = express()
 
